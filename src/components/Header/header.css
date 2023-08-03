@@ -1,0 +1,34 @@
+.header {
+    background-color: red;
+    color: yellow;
+}
+
+.header h1 {
+    margin-top: 0;
+}
+
+.header-lists {
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+    background: linear-gradient(180deg, rgba(250, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
+}
+
+.header-lists-list {
+    margin: 2px;
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+    /* background: rgb(250, 255, 0);
+    background: linear-gradient(180deg, rgba(250, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%); */
+}
+
+.header-lists-list li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: blue;
+}
+
+.header-lists-list li a:hover {
+    color: yellow;
+}

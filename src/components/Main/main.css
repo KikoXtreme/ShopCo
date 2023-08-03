@@ -1,0 +1,18 @@
+.logo {
+    position: relative;
+    top: 300px;
+    left: -530px;
+}
+
+.home-title {
+    color: linear-gradient(104deg, rgba(250, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
+}
+
+.home-title {
+    background: -webkit-linear-gradient(yellow 30%, red 90%);
+    -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
