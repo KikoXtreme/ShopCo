@@ -41,7 +41,7 @@ export const ProductsItem = () => {
                     <p style={{ marginLeft: "4px" }}>({productRating}/5.00)</p>
                 </div>
                 <p>{'\u20AC'} {productPrice}</p>
-                <a className="a" href="www.google.bg">Add to Cart</a>
+                <button className="button">Add to Cart</button>
             </div>
         </div>
     )
