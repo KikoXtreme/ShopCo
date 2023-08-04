@@ -3,7 +3,7 @@ import { Sorting } from "../Sorting/Sorting"
 
 export const ProductsList = () => {
     return (
-        <div style={{ flex: '4' }}>
+        <div style={{ flex: '85' }}>
             <Sorting />
             <ProductsItem />
         </div>
