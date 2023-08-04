@@ -5,6 +5,7 @@
 
 .header h1 {
     margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .header-lists {
@@ -19,8 +20,6 @@
     display: flex;
     list-style-type: none;
     gap: 60px;
-    /* background: rgb(250, 255, 0);
-    background: linear-gradient(180deg, rgba(250, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%); */
 }
 
 .header-lists-list li a {
