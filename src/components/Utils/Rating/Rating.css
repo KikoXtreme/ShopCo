@@ -1,0 +1,21 @@
+.rating {
+    font-size: 16px;
+    color: gold;
+}
+
+.star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    background-image: url("/public/assets/star.png");
+    background-size: contain;
+}
+
+.star.full {
+    background-color: transparent;
+}
+
+.star.half {
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+}

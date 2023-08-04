@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./productsItem.css";
+import { Rating } from "../../../Utils/Rating/Rating";
 
 export const ProductsItem = () => {
     const [allData, setAllData] = useState([]);
@@ -19,9 +20,10 @@ export const ProductsItem = () => {
 
     const productTitle = allData.products[0].title;
     const productDescription = allData.products[0].description;
-    const productCategory = allData.products[0].category;
+    // const productCategory = allData.products[0].category;
     const productPrice = allData.products[0].price;
     const productPic = allData.products[0].thumbnail;
+    const productRating = allData.products[0].rating;
 
     console.log(allData.products);
 
@@ -32,10 +34,14 @@ export const ProductsItem = () => {
             </div>
             <div className="info">
                 <h3>{productTitle}</h3>
-                <p>{productCategory}</p>
+                {/* <p>{productCategory}</p> */}
                 <p>{productDescription}</p>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Rating rating={productRating} />
+                    <p style={{ marginLeft: "4px" }}>({productRating}/5.00)</p>
+                </div>
                 <p>{'\u20AC'} {productPrice}</p>
-                <a className="a" href="www.google.bg">See more</a>
+                <a className="a" href="www.google.bg">Add to Cart</a>
             </div>
         </div>
     )
