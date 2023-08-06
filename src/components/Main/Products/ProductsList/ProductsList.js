@@ -21,8 +21,8 @@ export const ProductsList = () => {
         <div style={{ display: 'flex', flexDirection: 'column', flex: '85' }}>
             <Sorting />
             <div style={{ flex: '1', display: 'flex', flexWrap: 'wrap' }}>
-                {allData.map((product, index) => (
-                    <ProductsItem key={index} product={product} />
+                {allData.map((product) => (
+                    <ProductsItem key={product.id} product={product} />
                 ))}
             </div>
         </div>
