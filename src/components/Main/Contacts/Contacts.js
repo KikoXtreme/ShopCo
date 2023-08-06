@@ -32,19 +32,19 @@ export const Contacts = () => {
                             Contact Us
                         </h4>
                         <div class="info_contact">
-                            <a href="">
+                            <a href="/">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <span>
                                     Location
                                 </span>
                             </a>
-                            <a href="">
+                            <a href="/">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
                                     Call +01 1234567890
                                 </span>
                             </a>
-                            <a href="">
+                            <a href="/">
                                 <i class="fa fa-envelope"></i>
                                 <span>
                                     demo@gmail.com
@@ -57,16 +57,16 @@ export const Contacts = () => {
                             Follow Us
                         </h4>
                         <div class="social_box">
-                            <a href="">
+                            <a href="/">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                             </a>
-                            <a href="">
+                            <a href="/">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
-                            <a href="">
+                            <a href="/">
                                 <i class="fa fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a href="">
+                            <a href="/">
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                             </a>
                         </div>

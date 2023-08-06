@@ -30,7 +30,7 @@ export const About = () => {
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
                             </p>
-                            <a href="">
+                            <a href="/">
                                 Read More
                             </a>
                         </div>
