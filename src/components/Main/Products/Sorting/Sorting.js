@@ -3,5 +3,5 @@ export const Sorting = ()=>{
         <div>
             Category Name and Descriptioon --- Sorting 
         </div>
-    )
+    );
 }

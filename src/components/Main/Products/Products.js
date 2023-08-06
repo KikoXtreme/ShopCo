@@ -7,5 +7,5 @@ export const Products = () => {
             <LeftNav style={{ flex: '15' }} />
             <ProductsList style={{ flex: '85' }} />
         </div>
-    )
+    );
 }

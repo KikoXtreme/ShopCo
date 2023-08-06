@@ -9,5 +9,5 @@ export const LeftNav = () => {
           <li>Filter 5</li>
         </ul>
       </div>
-    )
+    );
 }
