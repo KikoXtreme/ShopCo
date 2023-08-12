@@ -3,10 +3,11 @@ import './footer.css';
 export const Footer = () => {
     return (
         <div className='footer'>
-            <p>
+            <p className='footer-p'>
                 &copy; {new Date().getFullYear()} ShopCo. All rights reserved. |{' '}
-                <a href="https://www.shopco.com/terms">Terms of Service</a> |{' '}
-                <a href="https://www.shopco.com/privacy">Privacy Policy</a>
+                <a href="/">T&C</a> |{' '}
+                <a href="/">Privacy Policy</a> |{' '}
+                <a href="/">Contact Us</a>
             </p>
         </div>
     );

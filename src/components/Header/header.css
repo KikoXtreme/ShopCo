@@ -1,11 +1,18 @@
 .header {
     background-color: red;
     color: yellow;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header h1 {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    margin: 10px;
 }
 
 .header-lists {
