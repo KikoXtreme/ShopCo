@@ -6,8 +6,8 @@ export const Sorting = ({ sortBy, sortOrder, onSortChange }) => {
             <label htmlFor="sort-by">Sort by:</label>
             <select id="sort-by" value={sortBy} onChange={onSortChange}>
                 <option value="price">Price</option>
+                <option value="title">Title</option>
                 <option value="rating">Rating</option>
-                {/* Add more sorting criteria options if needed */}
             </select>
             <label htmlFor="sort-order">Sort order:</label>
             <select id="sort-order" value={sortOrder} onChange={onSortChange}>
