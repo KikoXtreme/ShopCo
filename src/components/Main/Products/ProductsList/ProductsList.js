@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ProductsItem } from "../ProductsItem/ProductsItem"
 import { Sorting } from "../Sorting/Sorting"
+import "../../../../css/spinner.css";
 
 export const ProductsList = () => {
     const [allData, setAllData] = useState([]);
@@ -36,7 +37,12 @@ export const ProductsList = () => {
     });
 
     if (!allData || allData.length === 0) {
-        return <div>Loading...</div>;
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column', flex: '85' }}>
+                <div className="spinner"></div>
+                <div>Loading...</div>
+            </div>
+        );
     }
 
     return (
