@@ -4,7 +4,7 @@ import { Sorting } from "../Sorting/Sorting";
 import "../../../../css/spinner.css";
 import "./ProductsList.css";
 
-export const ProductsList = ({ products }) => {
+export const ProductsList = ({ products, loading }) => {
     const [sortBy, setSortBy] = useState("price");
     const [sortOrder, setSortOrder] = useState("asc");
 
@@ -38,11 +38,19 @@ export const ProductsList = ({ products }) => {
 
     const itemsToDisplay = sortedProducts.slice(0, displayedItems);
 
-    if (!products || products.length === 0) {
+    if (loading) {
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', flex: '85' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}>
                 <div className="spinner"></div>
                 <div>Loading...</div>
+            </div>
+        );
+    }
+
+    if (!products || products.length === 0) {
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}>
+                <div>No products found.</div>
             </div>
         );
     }

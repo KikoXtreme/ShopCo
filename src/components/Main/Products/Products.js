@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
-import { LeftNav } from "./LeftNav/LeftNav"
-import { ProductsList } from "./ProductsList/ProductsList"
+import { LeftNav } from "./LeftNav/LeftNav";
+import { ProductsList } from "./ProductsList/ProductsList";
 
 export const Products = () => {
     const [allData, setAllData] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const [titleFilter, setTitleFilter] = useState("");
+    const [minPriceFilter, setMinPriceFilter] = useState("");
+    const [maxPriceFilter, setMaxPriceFilter] = useState("");
+    const [loading, setLoading] = useState(true); // Add the loading state
+
 
     useEffect(() => {
         fetch('https://dummyjson.com/products')
@@ -12,19 +17,34 @@ export const Products = () => {
             .then(data => {
                 setAllData(data.products);
                 setFilteredProducts(data.products); // Initialize filtered products with all products
+                setLoading(false); // Set loading to false after products are fetched
             });
     }, []);
 
-    const handleFilter = (filterValue) => {
-        const filtered = allData.filter(product => product.title.toLowerCase().includes(filterValue.toLowerCase()));
+    const handleTitleFilter = (filterValue) => {
+        setTitleFilter(filterValue);
+        filterProducts(titleFilter, minPriceFilter, maxPriceFilter);
+    };
+
+    const handlePriceFilter = (minPrice, maxPrice) => {
+        setMinPriceFilter(minPrice);
+        setMaxPriceFilter(maxPrice);
+        filterProducts(titleFilter, minPrice, maxPrice);
+    };
+
+    const filterProducts = (titleFilter, minPriceFilter, maxPriceFilter) => {
+        const filtered = allData.filter(product =>
+            product.title.toLowerCase().includes(titleFilter.toLowerCase()) &&
+            (minPriceFilter === "" || product.price >= parseFloat(minPriceFilter)) &&
+            (maxPriceFilter === "" || product.price <= parseFloat(maxPriceFilter))
+        );
         setFilteredProducts(filtered);
-        console.log('TEST Filter', filterValue);
     };
 
     return (
         <div style={{ display: 'flex' }}>
-            <LeftNav style={{ flex: '15' }} onFilter={handleFilter} />
-            <ProductsList style={{ flex: '85' }} products={filteredProducts} />
+            <LeftNav style={{ flex: '15' }} onTitleFilter={handleTitleFilter} onPriceFilter={handlePriceFilter} />
+            <ProductsList style={{ flex: '85' }} products={filteredProducts} loading={loading}/>
         </div>
     );
 }

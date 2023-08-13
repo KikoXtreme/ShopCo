@@ -1,12 +1,24 @@
 import { useState } from "react";
 import "./LeftNav.css";
 
-export const LeftNav = ({ onFilter }) => {
-  const [filter, setFilter] = useState("");
+export const LeftNav = ({ onTitleFilter, onPriceFilter }) => {
+  const [titleFilter, setTitleFilter] = useState("");
+  const [minPriceFilter, setMinPriceFilter] = useState("");
+  const [maxPriceFilter, setMaxPriceFilter] = useState("");
 
-  const handleFilterInput = (event) => {
-    setFilter(event.target.value);
-    onFilter(event.target.value);
+  const handleTitleFilterInput = (event) => {
+    setTitleFilter(event.target.value);
+    onTitleFilter(event.target.value);
+  };
+
+  const handleMinPriceFilterInput = (event) => {
+    setMinPriceFilter(event.target.value);
+    onPriceFilter(event.target.value, maxPriceFilter);
+  };
+
+  const handleMaxPriceFilterInput = (event) => {
+    setMaxPriceFilter(event.target.value);
+    onPriceFilter(minPriceFilter, event.target.value);
   };
 
   return (
@@ -15,8 +27,22 @@ export const LeftNav = ({ onFilter }) => {
         className="filter"
         type="text"
         placeholder="Filter by title"
-        value={filter}
-        onChange={handleFilterInput}
+        value={titleFilter}
+        onChange={handleTitleFilterInput}
+      />
+      <input
+        className="filter"
+        type="number"
+        placeholder="Min Price"
+        value={minPriceFilter}
+        onChange={handleMinPriceFilterInput}
+      />
+      <input
+        className="filter"
+        type="number"
+        placeholder="Max Price"
+        value={maxPriceFilter}
+        onChange={handleMaxPriceFilterInput}
       />
     </div>
   );
