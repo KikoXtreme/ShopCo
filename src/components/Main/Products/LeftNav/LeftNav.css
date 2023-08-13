@@ -1,0 +1,11 @@
+.navigation {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: white;
+}
+
+.filter{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}

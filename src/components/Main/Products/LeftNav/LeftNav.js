@@ -1,13 +1,23 @@
-export const LeftNav = () => {
-    return (
-        <div className="navigation" style={{ flex: '15', backgroundColor: 'rgba(255, 0, 0, 0.2)' }}>
-        <ul>
-          <li>Filter 1</li>
-          <li>Filter 2</li>
-          <li>Filter 3</li>
-          <li>Filter 4</li>
-          <li>Filter 5</li>
-        </ul>
-      </div>
-    );
+import { useState } from "react";
+import "./LeftNav.css";
+
+export const LeftNav = ({ onFilter }) => {
+  const [filter, setFilter] = useState("");
+
+  const handleFilterInput = (event) => {
+    setFilter(event.target.value);
+    onFilter(event.target.value);
+  };
+
+  return (
+    <div className="navigation" style={{ flex: '15' }}>
+      <input
+        className="filter"
+        type="text"
+        placeholder="Filter by title"
+        value={filter}
+        onChange={handleFilterInput}
+      />
+    </div>
+  );
 }

@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { ProductsItem } from "../ProductsItem/ProductsItem"
-import { Sorting } from "../Sorting/Sorting"
+import React, { useState } from "react";
+import { ProductsItem } from "../ProductsItem/ProductsItem";
+import { Sorting } from "../Sorting/Sorting";
 import "../../../../css/spinner.css";
 import "./ProductsList.css";
 
-export const ProductsList = () => {
-    const [allData, setAllData] = useState([]);
-
+export const ProductsList = ({ products }) => {
     const [sortBy, setSortBy] = useState("price");
     const [sortOrder, setSortOrder] = useState("asc");
 
     const [displayedItems, setDisplayedItems] = useState(20);
     const itemsPerPage = 20;
-
-    useEffect(() => {
-        fetch('https://dummyjson.com/products')
-            .then(res => res.json())
-            .then(data => {
-                setAllData(data.products)
-            });
-    }, []);
 
     const handleSortChange = (event) => {
         const { id, value } = event.target;
@@ -30,7 +20,7 @@ export const ProductsList = () => {
         }
     };
 
-    const sortedProducts = allData.slice().sort((a, b) => {
+    const sortedProducts = products.slice().sort((a, b) => {
         if (sortBy === "price") {
             return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
         } else if (sortBy === "rating") {
@@ -48,7 +38,7 @@ export const ProductsList = () => {
 
     const itemsToDisplay = sortedProducts.slice(0, displayedItems);
 
-    if (!allData || allData.length === 0) {
+    if (!products || products.length === 0) {
         return (
             <div style={{ display: 'flex', flexDirection: 'column', flex: '85' }}>
                 <div className="spinner"></div>
@@ -66,7 +56,7 @@ export const ProductsList = () => {
                 ))}
             </div >
             <div className="load-more-container">
-                {displayedItems < allData.length && (
+                {displayedItems < products.length && (
                     <button onClick={loadMoreItems} className="load-more-button">
                         Load More
                     </button>
