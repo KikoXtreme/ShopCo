@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ProductsItem } from "../ProductsItem/ProductsItem";
 import { Sorting } from "../Sorting/Sorting";
 import "../../../../css/spinner.css";
@@ -40,7 +40,10 @@ export const ProductsList = ({ products, loading }) => {
 
     if (loading) {
         return (
-            <div className="loading" style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}>
+            <div
+                className="loading"
+                style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}
+            >
                 <div className="spinner"></div>
                 <div>Loading...</div>
             </div>

@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <header className="header">
             <h1>ShopCo</h1>
-            <h2>Best Prices, Best Goods</h2>
+            <h2>Best Prices, Best Products, Best Quality</h2>
             <div className="header-lists">
                 <ul className="header-lists-list">
                     <li><Link to="/">Home</Link></li>

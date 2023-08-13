@@ -8,7 +8,7 @@ export const Products = () => {
     const [titleFilter, setTitleFilter] = useState("");
     const [minPriceFilter, setMinPriceFilter] = useState("");
     const [maxPriceFilter, setMaxPriceFilter] = useState("");
-    const [loading, setLoading] = useState(true); // Add the loading state
+    const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
@@ -16,8 +16,8 @@ export const Products = () => {
             .then(res => res.json())
             .then(data => {
                 setAllData(data.products);
-                setFilteredProducts(data.products); // Initialize filtered products with all products
-                setLoading(false); // Set loading to false after products are fetched
+                setFilteredProducts(data.products);
+                setLoading(false);
             });
     }, []);
 
@@ -44,7 +44,7 @@ export const Products = () => {
     return (
         <div style={{ display: 'flex' }}>
             <LeftNav style={{ flex: '15' }} onTitleFilter={handleTitleFilter} onPriceFilter={handlePriceFilter} />
-            <ProductsList style={{ flex: '85' }} products={filteredProducts} loading={loading}/>
+            <ProductsList style={{ flex: '85' }} products={filteredProducts} loading={loading} />
         </div>
     );
 }

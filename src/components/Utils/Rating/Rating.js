@@ -1,4 +1,3 @@
-import React from "react";
 import "../../../css/rating.css";
 
 export const Rating = ({ rating }) => {

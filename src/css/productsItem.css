@@ -7,6 +7,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin: 16px auto;
+    margin-bottom: 28px;
 }
 
 .img {
@@ -21,6 +22,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 h3 {
@@ -39,6 +41,7 @@ p {
 
 .price {
     font-weight: bold;
+    margin-bottom: 4px;
 }
 
 .button {

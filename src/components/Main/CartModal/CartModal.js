@@ -1,4 +1,3 @@
-import React from "react";
 import "../../../css/cartModal.css";
 
 const CartModal = ({ isOpen, onClose }) => {
