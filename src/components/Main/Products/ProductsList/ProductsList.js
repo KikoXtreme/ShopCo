@@ -56,7 +56,7 @@ export const ProductsList = ({ products, loading }) => {
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', flex: '85' }}>
+        <div className="product-page" style={{ display: 'flex', flexDirection: 'column', flex: '85' }}>
             <Sorting sortBy={sortBy} sortOrder={sortOrder} onSortChange={handleSortChange} />
             <div style={{ flex: '1', display: 'flex', flexWrap: 'wrap' }}>
                 {itemsToDisplay.map((product) => (

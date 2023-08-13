@@ -1,0 +1,19 @@
+.navigation {
+    background-color: rgb(49, 49, 49);
+    color: orange;
+    min-height: 80vh;
+}
+
+.filter {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.filtersTitle {
+    color: orange;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold
+}

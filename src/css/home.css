@@ -1,0 +1,34 @@
+.home-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+}
+
+.home-title {
+    position: absolute;
+    font-size: 48px;
+    top: 20px;
+    background: -webkit-linear-gradient(red 30%, orange 90%);
+    -webkit-text-stroke: 2px black;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.logo-img {
+    background-image: url("/public/assets/logo.jpg");
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}

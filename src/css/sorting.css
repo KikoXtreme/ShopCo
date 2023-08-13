@@ -2,11 +2,12 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: rgb(205, 187, 50);
+    background-color: black;
 }
 
 label {
     margin-right: 10px;
+    color: orange;
     font-weight: bold;
 }
 
@@ -17,13 +18,11 @@ select {
     margin-right: 40px;
 }
 
-/* Style the options within the select dropdown */
 select option {
     background-color: white;
     color: black;
 }
 
-/* Style the select dropdown when it's focused */
 select:focus {
     border-color: #007bff;
     outline: 0;

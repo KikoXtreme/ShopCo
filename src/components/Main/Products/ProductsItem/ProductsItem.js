@@ -6,8 +6,8 @@ export const ProductsItem = ({ product }) => {
 
     return (
         <div className="card">
-            <div className="img">
-                <img src={thumbnail} alt="Product" />
+            <div>
+                <img   className="img" src={thumbnail} alt="Product" />
             </div>
             <div className="info">
                 <h3>{title}</h3>

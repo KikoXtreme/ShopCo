@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./LeftNav.css";
+import "../../../../css/leftNav.css";
 
 export const LeftNav = ({ onTitleFilter, onPriceFilter }) => {
   const [titleFilter, setTitleFilter] = useState("");
@@ -23,10 +23,13 @@ export const LeftNav = ({ onTitleFilter, onPriceFilter }) => {
 
   return (
     <div className="navigation" style={{ flex: '15' }}>
+      <div className="filtersTitle">
+        Filters:
+      </div>
       <input
         className="filter"
         type="text"
-        placeholder="Filter by title"
+        placeholder="Title"
         value={titleFilter}
         onChange={handleTitleFilterInput}
       />

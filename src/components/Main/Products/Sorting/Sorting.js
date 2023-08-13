@@ -1,4 +1,4 @@
-import "./Sorting.css";
+import "../../../../css/sorting.css";
 
 export const Sorting = ({ sortBy, sortOrder, onSortChange }) => {
     return (
