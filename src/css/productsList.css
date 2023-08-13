@@ -1,6 +1,7 @@
-.product-page{
-    background-color: rgb(223, 220, 220);
+.product-page {
+    background-color: rgb(130, 130, 130);
 }
+
 .load-more-container {
     display: flex;
     justify-content: center;

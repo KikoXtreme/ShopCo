@@ -1,5 +1,5 @@
 import React from "react";
-import "./Rating.css";
+import "../../../css/rating.css";
 
 export const Rating = ({ rating }) => {
     const fullStars = Math.floor(rating);

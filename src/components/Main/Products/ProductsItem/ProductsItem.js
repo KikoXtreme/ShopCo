@@ -1,4 +1,4 @@
-import "./productsItem.css";
+import "../../../../css/productsItem.css";
 import { Rating } from "../../../Utils/Rating/Rating";
 
 export const ProductsItem = ({ product }) => {
@@ -7,7 +7,7 @@ export const ProductsItem = ({ product }) => {
     return (
         <div className="card">
             <div>
-                <img   className="img" src={thumbnail} alt="Product" />
+                <img className="img" src={thumbnail} alt="Product" />
             </div>
             <div className="info">
                 <h3>{title}</h3>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ProductsItem } from "../ProductsItem/ProductsItem";
 import { Sorting } from "../Sorting/Sorting";
 import "../../../../css/spinner.css";
-import "./ProductsList.css";
+import "../../../../css/productsList.css";
 
 export const ProductsList = ({ products, loading }) => {
     const [sortBy, setSortBy] = useState("price");
