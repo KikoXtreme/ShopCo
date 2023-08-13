@@ -11,3 +11,11 @@
     padding: 8px;
     margin: 0;
 }
+
+.footer-a {
+    color: white;
+}
+
+.footer-a:hover {
+    color: rgb(130, 130, 130);
+}

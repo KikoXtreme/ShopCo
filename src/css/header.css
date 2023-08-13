@@ -22,7 +22,6 @@
     display: flex;
     justify-content: center;
     gap: 500px;
-    /* background: linear-gradient(180deg, rgba(251, 255, 0, 0.7) 0%, rgb(255, 200, 200, 1) 100%); */
     background: linear-gradient(90deg, rgba(250, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
 }
 
@@ -36,9 +35,9 @@
 .header-lists-list li a {
     font-weight: bold;
     text-decoration: none;
-    color: blue;
+    color: white;
 }
 
 .header-lists-list li a:hover {
-    color: yellow;
+    color: rgb(0, 0, 0);
 }

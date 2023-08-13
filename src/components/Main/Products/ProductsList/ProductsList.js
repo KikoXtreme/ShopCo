@@ -40,7 +40,7 @@ export const ProductsList = ({ products, loading }) => {
 
     if (loading) {
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="loading" style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}>
                 <div className="spinner"></div>
                 <div>Loading...</div>
             </div>
@@ -49,8 +49,12 @@ export const ProductsList = ({ products, loading }) => {
 
     if (!products || products.length === 0) {
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}>
-                <div>No products found.</div>
+            <div
+                className="no-products"
+                style={{ display: 'flex', flexDirection: 'column', flex: '85', alignItems: 'center', justifyContent: 'center' }}
+            >
+                No Products Found!
+                <p className="no-products-p" >Please check your filters again.</p>
             </div>
         );
     }
