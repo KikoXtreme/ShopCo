@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/ShopCo/static/css/main.b95b49a7.css",
-    "main.js": "/ShopCo/static/js/main.e477e29a.js",
+    "main.css": "/ShopCo/static/css/main.e5c6a448.css",
+    "main.js": "/ShopCo/static/js/main.4f48eddc.js",
     "static/js/787.df89e021.chunk.js": "/ShopCo/static/js/787.df89e021.chunk.js",
-    "static/media/logo.jpg": "/ShopCo/static/media/logo.1c642c07fc31f0e9d3f1.jpg",
     "index.html": "/ShopCo/index.html",
-    "main.b95b49a7.css.map": "/ShopCo/static/css/main.b95b49a7.css.map",
-    "main.e477e29a.js.map": "/ShopCo/static/js/main.e477e29a.js.map",
+    "main.e5c6a448.css.map": "/ShopCo/static/css/main.e5c6a448.css.map",
+    "main.4f48eddc.js.map": "/ShopCo/static/js/main.4f48eddc.js.map",
     "787.df89e021.chunk.js.map": "/ShopCo/static/js/787.df89e021.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b95b49a7.css",
-    "static/js/main.e477e29a.js"
+    "static/css/main.e5c6a448.css",
+    "static/js/main.4f48eddc.js"
   ]
 }
