@@ -19,7 +19,6 @@
 .header-lists {
     display: flex;
     justify-content: center;
-    gap: 500px;
     background: linear-gradient(90deg, rgba(250, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
 }
 
