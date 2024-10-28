@@ -2,9 +2,9 @@ import "../../../css/rating.css";
 
 export const Rating = ({ rating }) => {
     const fullStars = Math.floor(rating);
-    const hasHalfStar = rating - fullStars >= 0.5;
+    const hasHalfStar = rating - fullStars <= 1;
 
-    const stars = Array.from({ length: 5 }, (_, index) => {
+    const stars = Array.from({ length: rating + 1 }, (_, index) => {
         let starClassName = "star";
         if (index < fullStars) {
             starClassName += " full";
